@@ -1,13 +1,13 @@
 # DF.CORR() and REGRESSION MODELING EVALUATION
 
-This repository contains a Python script for automatically conducting correlation analysis and regression modeling evaluation using pandas DataFrames (`DF`). The scripts include functions for calculating correlations between variables in a DataFrame and evaluating various regression models for predictive analysis.
+This repository contains a Python script for **automatically** conducting correlation analysis and regression modeling evaluation using pandas DataFrames (`DF`). The scripts include functions for calculating correlations between variables in a DataFrame and evaluating various regression models for predictive analysis.
 
 
 ## Features:
 
 - **Correlation Analysis:** Explore relationships between variables in a DataFrame using the `corr()` function.
 - **Regression Modeling Evaluation:** Evaluate the performance of regression models using metrics such as Mean Squared Error (`MSE`) and R-squared (`R2`).
-- **Easy to use output lists** Gives meaningful insights of data correlations and an easy to iterated list.
+- **Easy to use output lists:** Gives meaningful insights of data correlations and an easy to iterate list.
 
 
 ## Key Components:
