@@ -12,7 +12,7 @@ This repository contains a Python script for automatically conducting correlatio
 ## Key Components:
 
 - `correlation_and_regression.py`: Python script for performing correlation analysis and regression modeling evaluation.
-
+- `requirements.txt`: Text file with libraries needed.
 
 ## How to Use:
 
