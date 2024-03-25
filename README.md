@@ -7,6 +7,7 @@ This repository contains a Python script for automatically conducting correlatio
 
 - **Correlation Analysis:** Explore relationships between variables in a DataFrame using the `corr()` function.
 - **Regression Modeling Evaluation:** Evaluate the performance of regression models using metrics such as Mean Squared Error (`MSE`) and R-squared (`R2`).
+- **Easy to use output lists** Gives meaningful insights of data correlations and an easy to iterated list.
 
 
 ## Key Components:
