@@ -220,7 +220,11 @@ def regression_model_evaluation(predictor_variable, predicted_variable, polynomi
             )
 
 
-# After getting the corr(), you can define and uncomment the two DF headers to have the MSE and R-squared results compared bellow and set the polynomial_degree
+
+# In the first DF[[]] there's a list, so you can add as many predictORs variables(df.columns) as you wish. 
+# In the second DF[] there's only one predictED variable(df.columns)
+# You can set the degree of the polynomial regression model bellow
+# Uncomment the lines bellow>>>
 
 #regression_model_evaluation(
 #    DF[['engine-size']], DF['price'], polynomial_degree=3)
