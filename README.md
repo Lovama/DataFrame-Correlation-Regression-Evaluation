@@ -25,11 +25,12 @@ This repository contains a Python script for automatically conducting correlatio
 
 ## DOUBTS?
 - Note that you should read about `correlation_and_regression.py` first, then proceed to `correlations_and_regression_widgets.ipynb`.
+- The file `correlation_and_regression.py` has no data visualizations, the Data Viz are in the `correlations_and_regression_widgets.ipynb`.
 - In the `correlations_and_regression_widgets.ipynb`, when it's displayed <em>Multiple Linear Regression</em>, it means that there's a list of predictors variables, <strong>but</strong> you can set just one predictor variable. In this case it's a <em>Simple Linear Regression</em> displayed as <em>Multiple Linear Regression</em>.
 
 ## Console Output:
 
-- Given a Data Set, the output should look like this:
+- Given a Data Set, the console output should look like this:
 ```
 | Creator: Lorenzo Vaz Marzari 
 |
