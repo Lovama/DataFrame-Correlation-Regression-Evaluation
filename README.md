@@ -12,7 +12,7 @@ This repository contains a Python script for automatically conducting correlatio
 ## Key Components:
 
 - `correlation_and_regression.py`: Python script for performing correlation analysis and regression modeling evaluation.
-- `correlations_and_regression_widgets.ipynb`: Jupyter Notebook with the previous module + widget to adjust the degree of polynomial regression model + charts
+- `correlations_and_regression_widgets.ipynb`: Jupyter Notebook with the previous module + widget to adjust the degree of polynomial regression model + charts. Note that you should leartn about `correlation_and_regression.py` first.
 - `requirements.txt`: Text file with libraries needed.
 
 ## How to Use:
