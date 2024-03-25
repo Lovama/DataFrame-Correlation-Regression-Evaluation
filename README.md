@@ -165,6 +165,7 @@ Polynomial Regression (Degree 2) - Mean Squared Error: 33758519.0074, R-squared:
 Polynomial Regression (Degree 3) - Mean Squared Error: 27858163.8073, R-squared: 0.7723
 ```
 
+## Gallery:
 ![Screenshot 2024-03-25 151906](https://github.com/HappyCoderBr/DF-CORR-and-REGRESSION-MODELING-EVALUATION/assets/48333433/2a45744d-5c19-4066-b58c-5e2b6901c095)
 ![Screenshot 2024-03-25 151918](https://github.com/HappyCoderBr/DF-CORR-and-REGRESSION-MODELING-EVALUATION/assets/48333433/0f418771-2ba7-4060-a2df-364e3e4991b4)
 ![Screenshot 2024-03-25 151931](https://github.com/HappyCoderBr/DF-CORR-and-REGRESSION-MODELING-EVALUATION/assets/48333433/f21bb4bf-6018-43f6-81eb-c7b5eea98d50)
