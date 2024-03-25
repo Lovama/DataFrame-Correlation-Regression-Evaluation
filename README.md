@@ -164,6 +164,12 @@ Polynomial Regression (Degree 2) - Mean Squared Error: 33758519.0074, R-squared:
 
 Polynomial Regression (Degree 3) - Mean Squared Error: 27858163.8073, R-squared: 0.7723
 ```
+
+![Screenshot 2024-03-25 151906](https://github.com/HappyCoderBr/DF-CORR-and-REGRESSION-MODELING-EVALUATION/assets/48333433/2a45744d-5c19-4066-b58c-5e2b6901c095)
+![Screenshot 2024-03-25 151918](https://github.com/HappyCoderBr/DF-CORR-and-REGRESSION-MODELING-EVALUATION/assets/48333433/0f418771-2ba7-4060-a2df-364e3e4991b4)
+![Screenshot 2024-03-25 151931](https://github.com/HappyCoderBr/DF-CORR-and-REGRESSION-MODELING-EVALUATION/assets/48333433/f21bb4bf-6018-43f6-81eb-c7b5eea98d50)
+![Screenshot 2024-03-25 152020](https://github.com/HappyCoderBr/DF-CORR-and-REGRESSION-MODELING-EVALUATION/assets/48333433/cded6502-bcff-4ece-8158-a8d3ad98b65a)
+
 ![Screenshot 2024-03-25 145513](https://github.com/HappyCoderBr/DF-CORR-and-REGRESSION-MODELING-EVALUATION/assets/48333433/31d42f73-b51b-4cbd-9787-f62c492057c3)
 ![Screenshot 2024-03-25 145524](https://github.com/HappyCoderBr/DF-CORR-and-REGRESSION-MODELING-EVALUATION/assets/48333433/6fd6ec7d-488a-44a7-9dc6-91e99276b29a)
 ![Screenshot 2024-03-25 145535](https://github.com/HappyCoderBr/DF-CORR-and-REGRESSION-MODELING-EVALUATION/assets/48333433/b6ac4592-800e-4497-8941-07f748df8fbf)
