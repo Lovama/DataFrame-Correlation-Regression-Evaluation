@@ -17,12 +17,14 @@ This repository contains a Python script for automatically conducting correlatio
 ## How to Use:
 
 1. Clone the repository to your local machine.
-2. Install the required dependencies listed in `requirements.txt`.
-3. Run the Python scripts using your preferred IDE or command line interface.
+2. Install the required dependencies listed in `requirements.txt` using `pip freeze`.
+3. Run the Python script using your preferred IDE or command line interface.
 4. Customize the scripts to analyze your own datasets and modify the models as needed.
+- In the module go to LINE 24 and LAST LINE for more information.
 
 ## Console Output:
 
+- Given a Data Set, with DF.CORR() and REGRESSION MODELING EVALUATION, the output should look like this:
 ```
 | Creator: Lorenzo Vaz Marzari 
 |
@@ -148,6 +150,13 @@ List of Highest Combinations:
 
 List of Lowest Combinations:
 [['compression-ratio', 'gas', -0.9852311290083914], ['city-mpg', 'city-L/100km', -0.949712910616761], ['highway-mpg', 'city-L/100km', -0.9300278818761628], ['horsepower', 'city-mpg', -0.8222143251628639], ['horsepower', 'highway-mpg', -0.8045747816033887], ['curb-weight', 'highway-mpg', -0.7948889423035673], ['curb-weight', 'city-mpg', -0.7495430863216357], ['highway-mpg', 'price', -0.7046922650589531], ['length', 'highway-mpg', -0.6981418469786207], ['city-mpg', 'price', -0.6865710067844684], ['width', 'highway-mpg', -0.6806352140910513], ['engine-size', 'highway-mpg', -0.6795712591220742], ['length', 'city-mpg', -0.6651923947142154], ['engine-size', 'city-mpg', -0.6505459759740386], ['width', 'city-mpg', -0.633530639341753], ['bore', 'highway-mpg', -0.5913092391650802], ['bore', 'city-mpg', -0.5820270499536312], ['symboling', 'height', -0.5501598641343745], ['wheel-base', 'highway-mpg', -0.5433044680377366], ['symboling', 'wheel-base', -0.5359868030343233], ['peak-rpm', 'diesel', -0.4758119321728286], ['wheel-base', 'city-mpg', -0.4706064088423566], ['compression-ratio', 'peak-rpm', -0.435779763301587], ['normalized-losses', 'height', -0.3737369502352739], ['symboling', 'length', -0.3654043627907566], ['wheel-base', 'peak-rpm', -0.3603045279169449], ['height', 'peak-rpm', -0.30997400245174694], ['wheel-base', 'gas', -0.3072372184592825], ['compression-ratio', 'city-L/100km', -0.2993715132652865], ['length', 'peak-rpm', -0.2859695997007056], ['height', 'gas', -0.2815784474718143], ['curb-weight', 'peak-rpm', -0.27936061978835147], ['bore', 'peak-rpm', -0.2673915985169951], ['city-mpg', 'gas', -0.26567569646153183], ['engine-size', 'peak-rpm', -0.2567329744707591], ['width', 'peak-rpm', -0.24580014375355738], ['width', 'gas', -0.24435576670039616], ['symboling', 'width', -0.2424226038916475], ['stroke', 'gas', -0.2413034454482311], ['city-L/100km', 'diesel', -0.2412823477404384], ['symboling', 'curb-weight', -0.2331184853695864], ['normalized-losses', 'city-mpg', -0.22501572863445693], ['curb-weight', 'gas', -0.22104562326657237], ['compression-ratio', 'horsepower', -0.21451413568333663], ['length', 'gas', -0.211186943726097], ['highway-mpg', 'gas', -0.19869018404293334], ['symboling', 'diesel', -0.1967352925088923], ['symboling', 'compression-ratio', -0.18219615797610494], ['normalized-losses', 'highway-mpg', -0.18187718191761093], ['horsepower', 'diesel', -0.16905251875871052]]
+
+
+Simple Linear Regression - Mean Squared Error: 33696986.9842, R-squared: 0.7246
+
+Polynomial Regression (Degree 2) - Mean Squared Error: 33758519.0074, R-squared: 0.7241
+
+Polynomial Regression (Degree 3) - Mean Squared Error: 27858163.8073, R-squared: 0.7723
 ```
 
 ## Contributions:
