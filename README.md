@@ -12,7 +12,7 @@ This repository contains a Python script for automatically conducting correlatio
 ## Key Components:
 
 - `correlation_and_regression.py`: Python script for performing correlation analysis and regression modeling evaluation.
-- `correlations_and_regression_widgets.ipynb`: Jupyter Notebook with the previous module + widget to adjust the degree of polynomial regression model + charts. Note that you should leartn about `correlation_and_regression.py` first.
+- `correlations_and_regression_widgets.ipynb`: Jupyter Notebook with the previous module + widget to adjust the degree of polynomial regression model + charts.
 - `requirements.txt`: Text file with libraries needed.
 
 ## How to Use:
@@ -22,6 +22,10 @@ This repository contains a Python script for automatically conducting correlatio
 3. Run the Python script using your preferred IDE or command line interface.
 4. Customize the scripts to analyze your own datasets and modify the models as needed.
 - In the `correlation_and_regression.py` go to LINE 24 and LAST LINE for more information.
+
+## DOUBTS?
+- Note that you should read about `correlation_and_regression.py` first, then proceed to `correlations_and_regression_widgets.ipynb`.
+- In the `correlations_and_regression_widgets.ipynb`, when it's displayed <em>Multiple Linear Regression</em>, it means that there's a list of predictors variables, <strong>but</strong> you can set just one predictor variable. In this case it's a <em>Simple Linear Regression</em> displayed as <em>Multiple Linear Regression</em>.
 
 ## Console Output:
 
@@ -159,6 +163,11 @@ Polynomial Regression (Degree 2) - Mean Squared Error: 33758519.0074, R-squared:
 
 Polynomial Regression (Degree 3) - Mean Squared Error: 27858163.8073, R-squared: 0.7723
 ```
+![Screenshot 2024-03-25 145513](https://github.com/HappyCoderBr/DF-CORR-and-REGRESSION-MODELING-EVALUATION/assets/48333433/31d42f73-b51b-4cbd-9787-f62c492057c3)
+![Screenshot 2024-03-25 145524](https://github.com/HappyCoderBr/DF-CORR-and-REGRESSION-MODELING-EVALUATION/assets/48333433/6fd6ec7d-488a-44a7-9dc6-91e99276b29a)
+![Screenshot 2024-03-25 145535](https://github.com/HappyCoderBr/DF-CORR-and-REGRESSION-MODELING-EVALUATION/assets/48333433/b6ac4592-800e-4497-8941-07f748df8fbf)
+![Screenshot 2024-03-25 145554](https://github.com/HappyCoderBr/DF-CORR-and-REGRESSION-MODELING-EVALUATION/assets/48333433/e3595464-1df0-4a4f-81fd-783ee4c5f4a0)
+
 
 ## Contributions:
 
