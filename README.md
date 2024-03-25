@@ -25,7 +25,7 @@ This repository contains a Python script for automatically conducting correlatio
 
 ## Console Output:
 
-- Given a Data Set, with DF.CORR() and REGRESSION MODELING EVALUATION, the output should look like this:
+- Given a Data Set, the output should look like this:
 ```
 | Creator: Lorenzo Vaz Marzari 
 |
