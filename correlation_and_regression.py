@@ -1,33 +1,21 @@
-"""
-| Creator: Lorenzo Vaz Marzari                  
-|
-| Application: DataFrame AUTO-FINDER for corr()
-|
-| https://github.com/HappyCoderBr
-|
-| @2024
-L_______________________________________________
-
-Module to analyze data correlations and perform regression modeling evaluation.
-Go to LINE 24 and LAST LINE for more information
-"""
-
 import os
 import platform
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import r2_score, mean_squared_error
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from scipy import stats
+from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.preprocessing import PolynomialFeatures
 from sklearn.linear_model import LinearRegression
-import pandas as pd
+from sklearn.model_selection import train_test_split
 from colorama import Fore, Style
-
-FILE_PATH = "https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0101EN-SkillsNetwork/labs/Data%20files/automobileEDA.csv"
+from ipywidgets import interact
+import ipywidgets as widgets
 
 
 def clear_terminal():
-    """
-    Clears the terminal based on the operating system.
-    """
+    """Clears the terminal screen."""
     system = platform.system().lower()
     if system.startswith('win'):
         os.system('cls')
@@ -46,37 +34,39 @@ def print_colored_title(title):
     """
     print(f"{Style.BRIGHT}{Fore.YELLOW}{title}{Style.RESET_ALL}")
 
-############################################################L#########
-# CORR #
+
 ######################################################################
-
-
+# CORRELATIONS #
+######################################################################
 pd.set_option('display.max_rows', None)
 pd.set_option('display.max_columns', None)
 
-DF = pd.read_csv(FILE_PATH, header=0)
+FILE_PATH = "automobileEDA.csv"
+df = pd.read_csv(FILE_PATH, header=0)
 
 
 def highest_lowest_correlations(source, top_n):
     """
     Calculates the highest and lowest correlations different from 1 and -1 in a DataFrame.
 
-    Args:
-        source (pd.DataFrame): The source DataFrame.
-        top_n (int): Number of highest and lowest correlations to be returned.
+    Parameters:
+    - source (pd.DataFrame): The source DataFrame.
+    - top_n (int): Number of highest and lowest correlations to be returned.
 
     Returns:
-        pd.DataFrame: DataFrame with the highest correlations.
-        pd.DataFrame: DataFrame with the lowest correlations.
-        list: List of lists with the highest combinations.
-        list: List of lists with the lowest combinations.
+    - highest_correlations_df (pd.DataFrame): DataFrame with the highest correlations.
+    - lowest_correlations_df (pd.DataFrame): DataFrame with the lowest correlations.
+    - highest_combinations_list (list): List of lists with the highest combinations.
+    - lowest_combinations_list (list): List of lists with the lowest combinations.
     """
     correlation_matrix = source.corr()
+
     correlation_matrix = correlation_matrix.where(
         ~((correlation_matrix == 1) | (correlation_matrix == -1)))
-    flattened_correlations = correlation_matrix.unstack().dropna()
-    added_combinations = set()
 
+    flattened_correlations = correlation_matrix.unstack().dropna()
+
+    added_combinations = set()
     highest_correlations = []
     lowest_correlations = []
 
@@ -103,72 +93,82 @@ def highest_lowest_correlations(source, top_n):
     return highest_correlations_df, lowest_correlations_df, highest_combinations_list, lowest_combinations_list
 
 
-HIGHEST, LOWEST, HIGHEST_COMBINATIONS, LOWEST_COMBINATIONS = highest_lowest_correlations(
-    DF, 99)
+highest, lowest, highest_combinations, lowest_combinations = highest_lowest_correlations(
+    df, 99)
 
 clear_terminal()
 
 print_colored_title(
     '''
-| Creator: Lorenzo Vaz Marzari 
+                                                                     
+    ,o888888o.        ,o888888o.     8 888888888o.   8 888888888o.   
+   8888     `88.   . 8888     `88.   8 8888    `88.  8 8888    `88.  
+,8 8888       `8. ,8 8888       `8b  8 8888     `88  8 8888     `88  
+88 8888           88 8888        `8b 8 8888     ,88  8 8888     ,88  
+88 8888           88 8888         88 8 8888.   ,88'  8 8888.   ,88'  
+88 8888           88 8888         88 8 888888888P'   8 888888888P'   
+88 8888           88 8888        ,8P 8 8888`8b       8 8888`8b       
+`8 8888       .8' `8 8888       ,8P  8 8888 `8b.     8 8888 `8b.     
+   8888     ,88'   ` 8888     ,88'   8 8888   `8b.   8 8888   `8b.   
+    `8888888P'        `8888888P'     8 8888     `88. 8 8888     `88. 
+
+
+| Creator: Lorenzo Vaz Marzari
 |
-| Application: DataFrame AUTO-FINDER for corr()
+| Application: DataFrame AUTO-FINDER for corr() 
+|                           & 
+|              Regression Models Viz and Evaluation
 |
-| https://github.com/HappyCoderBr
+| https://github.com/Lovama
 |
 | @2024
     ''')
 
-print(f"\n\n{Fore.GREEN}Highest correlations (different from 1 and -1):{Style.RESET_ALL}")
-print(HIGHEST)
+print(
+    f"\n\n{Fore.CYAN}Highest correlations (different from 1 and -1):{Style.RESET_ALL}")
+print(highest)
 
-print(f"\n\n{Fore.RED}Lowest correlations (different from 1 and -1):{Style.RESET_ALL}")
-print(LOWEST)
+print(f"\n\n{Fore.MAGENTA}Lowest correlations (different from 1 and -1):{Style.RESET_ALL}")
+print(lowest)
 
-print(f"\n\n{Fore.CYAN}List of Highest Combinations:{Style.RESET_ALL}")
-print(HIGHEST_COMBINATIONS)
+print(f"\n\n{Fore.YELLOW}List of Highest Combinations:{Style.RESET_ALL}")
+print(highest_combinations)
 
-print(f"\n\n{Fore.MAGENTA}List of Lowest Combinations:{Style.RESET_ALL}")
-print(LOWEST_COMBINATIONS)
+print(f"\n\n{Fore.RED}List of Lowest Combinations:{Style.RESET_ALL}")
+print(lowest_combinations)
 
-############################################################V#########
-# Mean Squared Error and R-Rquared #
+######################################################################
+# MSE, R2 #
 ######################################################################
 
 
-def regression_model_evaluation(predictor_variable, predicted_variable, polynomial_degree=2):
+def plot_regression(predictor_variable, predicted_variable, polynomial_degree):
     """
-    Performs regression modeling and evaluates the model.
+    Plots the regression model for given predictor and predicted variables.
 
-    Args:
-        predictor_variable (pd.Series): The variable to be predicted.
-        predicted_variable (pd.DataFrame): The list of predictor variables.
-        polynomial_degree (int): Degree of polynomial features. Default -> 2
-
-    Returns:
-        None
+    Parameters:
+    - predictor_variable (pd.DataFrame): The predictor variable DataFrame. One or more df.columns
+    - predicted_variable (pd.Series): The predicted variable Series. Just one df.column
+    - polynomial_degree (int): Degree of the polynomial for polynomial regression.
     """
-    model = LinearRegression()
-    model_name = 'Multiple Linear Regression' if len(
-        predictor_variable.columns) > 1 else 'Simple Linear Regression'
+    if len(predictor_variable.columns) > 1:
+        model_name = 'Multiple Linear Regression'
+    else:
+        model_name = 'Simple Linear Regression'
 
-    x_train, x_test, y_train, y_test = train_test_split(
-        predictor_variable, predicted_variable, test_size=0.2, random_state=42)
-
-    model.fit(x_train, y_train)
+    X_train, X_test, y_train, y_test = train_test_split(
+        predictor_variable, predicted_variable, test_size=0.2, random_state=42
+    )
 
     for degree in range(1, polynomial_degree + 1):
-        if degree == 1:
-            x_train_poly = x_train.values.reshape(-1, 1)
-            x_test_poly = x_test.values.reshape(-1, 1)
-        else:
-            poly = PolynomialFeatures(degree=degree)
-            x_train_poly = poly.fit_transform(x_train)
-            x_test_poly = poly.transform(x_test)
+        poly = PolynomialFeatures(degree=degree)
+        X_train_poly = poly.fit_transform(X_train)
+        X_test_poly = poly.transform(X_test)
 
         poly_model = LinearRegression()
-        poly_model.fit(x_train_poly, y_train)
-        y_pred_poly = poly_model.predict(x_test_poly)
+        poly_model.fit(X_train_poly, y_train)
+
+        y_pred_poly = poly_model.predict(X_test_poly)
 
         mse_poly = mean_squared_error(y_test, y_pred_poly)
         r2_poly = r2_score(y_test, y_pred_poly)
@@ -179,6 +179,23 @@ def regression_model_evaluation(predictor_variable, predicted_variable, polynomi
         else:
             print(f"{Fore.GREEN}Polynomial Regression (Degree {degree}){Style.RESET_ALL} - Mean Squared Error: {mse_poly:.4f}, R-squared: {r2_poly:.4f}\n")
 
+        plt.figure(figsize=(8, 6))
+        sns.set(style="darkgrid", rc={
+                "axes.facecolor": "#2E2E2E", "grid.color": "#404040"})
 
-regression_model_evaluation(
-    DF[['engine-size']], DF['price'], polynomial_degree=3)
+        x_label = ', '.join(predictor_variable.columns)
+
+        sns.regplot(x=X_test.iloc[:, 0], y=y_test, scatter_kws={
+                    's': 20, 'color': 'blue'}, order=degree, ci=None, line_kws={'color': 'chartreuse'})
+        plt.title(f'{model_name} - Polynomial Degree {degree}')
+        plt.xlabel(x_label)
+        plt.ylabel(predicted_variable.name)
+        plt.show()
+
+
+degree_slider = widgets.IntSlider(
+    value=2, min=1, max=10, step=1, description='Polynomial Degree')
+
+interact(plot_regression, predictor_variable=widgets.fixed(df[['engine-size', 'length']]),
+         predicted_variable=widgets.fixed(df['price']),
+         polynomial_degree=degree_slider)
