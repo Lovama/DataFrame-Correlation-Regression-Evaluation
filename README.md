@@ -7,7 +7,7 @@ This repository contains a Python script for **automatically** conducting correl
 
 ## 🚀 Quick Start
 
-1. **`Set FILE_PATH`**
+1. **Set `FILE_PATH` variable**
 2. **Go to the end of the code to set "df.columns".**
 
 
