@@ -10,6 +10,12 @@ This repository contains a Python script for **automatically** conducting correl
 1. **Set FILE_PATH.**
 2. **Go to the end of the code to select "df.columns".**
 
+
+🖼️ Gallery
+
+![GIF](demo_df.gif)
+
+
 ## ✨ Features
 
 - **Correlation Analysis:** Explore relationships between variables in a DataFrame using the `corr()` function.
@@ -76,8 +82,6 @@ Lowest correlations (different from 1 and -1):
 Multiple Linear Regression - Mean Squared Error: 34539979.2350, R-squared: 0.7177
 Polynomial Regression (Degree 2) - Mean Squared Error: 33359585.1014, R-squared: 0.7273
 ```
-
-🖼️ Gallery
 
 
 🤝 Contributions
