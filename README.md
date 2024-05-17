@@ -2,6 +2,10 @@
 
 This repository contains a Python script for **automatically** conducting correlation analysis and regression modeling evaluation using pandas DataFrames (`DF`). The scripts include functions for calculating correlations between variables in a DataFrame and evaluating various regression models for predictive analysis.
 
+## For FAST READERS!!!
+
+- Simply execute the file and go to the last line of the code.
+
 
 ## Features:
 
