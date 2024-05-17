@@ -30,10 +30,10 @@ This repository contains a Python script for **automatically** conducting correl
 
 ## 🛠️ How to Use
 
-1. **Clone the repository to your local machine.**
-2. **Install the required dependencies listed in [requirements.txt](requirements.txt) using `pip install -r requirements.txt`.**
-3. **Run the Python script using your preferred IDE or command line interface.**
-4. **Customize the scripts to analyze your own datasets and modify the models as needed.**
+1. **Clone** the repository to your local machine.
+2. **Install** the required dependencies listed in [requirements.txt](requirements.txt) using `pip install -r requirements.txt`.
+3. **Run** the Python script using your preferred IDE or command line interface.
+4. **Customize** the scripts to analyze your own datasets and modify the models as needed.
    - In the script, go to the end and set `predictor_variable` and `predicted_variable`. Note that `predictor_variable` can have more than one set.
 
 ## ❓ FAQs
