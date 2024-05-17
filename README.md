@@ -194,3 +194,8 @@ Polynomial Regression (Degree 2) - Mean Squared Error: 33359585.1014, R-squared:
 ## Contributions:
 
 Contributions to improve the code, add new features, or fix bugs are welcome! Please fork the repository, make your changes, and submit a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
