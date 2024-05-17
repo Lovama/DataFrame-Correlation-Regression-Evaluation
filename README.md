@@ -14,7 +14,7 @@ This repository contains a Python script for **automatically** conducting correl
 🖼️ Gallery
 
 
-![GIF](gif_demo.gif)
+![GIF](rounded_gif.gif)
 
 
 ## ✨ Features
