@@ -75,13 +75,14 @@ Lowest correlations (different from 1 and -1):
 
 Multiple Linear Regression - Mean Squared Error: 34539979.2350, R-squared: 0.7177
 Polynomial Regression (Degree 2) - Mean Squared Error: 33359585.1014, R-squared: 0.7273
+```
 
 🖼️ Gallery
 
 
 🤝 Contributions
-Contributions to improve the code, add new features, or fix bugs are welcome! Please fork the repository, make your changes, and submit a pull request.
+- Contributions to improve the code, add new features, or fix bugs are welcome! Please fork the repository, make your changes, and submit a pull request.
 
 
 📜 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+- This project is licensed under the MIT License - see the LICENSE file for details.
