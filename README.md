@@ -4,7 +4,8 @@ This repository contains a Python script for **automatically** conducting correl
 
 ## For FAST READERS!!!
 
-- Simply execute the file and go to the last line of the code.
+1. Set FILE_PATH.
+2. Go to the end of code to select "df.columns".
 
 
 ## Features:
