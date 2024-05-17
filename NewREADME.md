@@ -13,7 +13,7 @@ This repository contains a Python script for **automatically** conducting correl
 
 🖼️ Gallery
 
-![GIF](demo_adf.gif)
+![GIF](demo_df.gif)
 
 
 ## ✨ Features
