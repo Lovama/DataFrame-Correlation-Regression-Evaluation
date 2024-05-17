@@ -11,8 +11,7 @@ This repository contains a Python script for **automatically** conducting correl
 2. **Go to the end of the code to select "df.columns".**
 
 
-🖼️ Gallery
-
+##🖼️ Gallery
 
 ![GIF](rounded_gif.gif)
 
