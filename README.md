@@ -34,11 +34,11 @@ This repository contains a Python script for **automatically** conducting correl
 2. **Install the required dependencies listed in [requirements.txt](requirements.txt) using `pip install -r requirements.txt`.**
 3. **Run the Python script using your preferred IDE or command line interface.**
 4. **Customize the scripts to analyze your own datasets and modify the models as needed.**
-   - In the [correlations_and_regression_widgets.ipynb](correlations_and_regression_widgets.ipynb), go to the end and set `predictor_variable` and `predicted_variable`. Note that `predictor_variable` can have more than one set.
+   - In the script, go to the end and set `predictor_variable` and `predicted_variable`. Note that `predictor_variable` can have more than one set.
 
 ## ❓ FAQs
 
-- **Multiple Linear Regression:** In the `correlations_and_regression_widgets.ipynb`, when it's displayed as <em>Multiple Linear Regression</em>, it means that there's a list of predictor variables, but you can set just one predictor variable. In this case, it's a <em>Simple Linear Regression</em> displayed as <em>Multiple Linear Regression</em>.
+- **Multiple Linear Regression:** In the script, when it's displayed as <em>Multiple Linear Regression</em>, it means that there's a list of predictor variables, but you can set just one `predictor_variable`. In this case, it's a <em>Simple Linear Regression</em> displayed as <em>Multiple Linear Regression</em>.
 
 ## 📊 Console Output
 
