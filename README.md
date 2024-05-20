@@ -90,5 +90,5 @@ Polynomial Regression (Degree 2) - Mean Squared Error: 33359585.1014, R-squared:
 
 
 📜 License
-- This project is licensed under the [MIT License](LICENSE) - see the LICENSE file for details.
+- This project is licensed under the [MIT License](LICENSE).
 
