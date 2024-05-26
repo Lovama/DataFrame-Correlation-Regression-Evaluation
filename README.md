@@ -4,7 +4,7 @@
 ![Python](https://img.shields.io/badge/python-3.8%2B-green.svg)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Lovama/DF-CORR-and-REGRESSION-MODELING-EVALUATION)
 
-This repository contains a Python script for **automatically** conducting correlation analysis and regression modeling evaluation using pandas DataFrames (`DF`). The scripts include functions for calculating correlations between variables in a DataFrame and evaluating various regression models for predictive analysis.
+This repository contains a Python script for **automatically** conducting correlation analysis and regression modeling evaluation using pandas DataFrames (`DF`). The scripts include functions for calculating correlations between variables in a DataFrame and evaluating various regression models for predictive analysis. **In other words**, this script helps you identify wich are the best variable(s) to predict another variable & helps you identify wich polynomial regression degree has the best R-squared value.
 
 ## 🚀 FAST READERS SECTION:
 
